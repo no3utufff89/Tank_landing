@@ -1,0 +1,31 @@
+@use '../vars' as *;
+.attention-section {
+    padding-bottom: 60px;
+}
+.attention {
+    &__title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    &__control {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        cursor: pointer;
+        max-width: max-content;
+        svg {
+            transform: rotate(-180deg);
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 140%;
+        color: $gray;
+    }
+}

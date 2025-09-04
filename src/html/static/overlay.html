@@ -1,0 +1,75 @@
+<div class="overlay">
+    <div class="modal">
+        <button class="btn modal__close-btn">
+            <svg class="icon">
+                <use xlink:href="img/icons/sprite.svg#close-icon"></use>
+            </svg>
+        </button>
+        <div class="modal__header">
+            <p class="modal__title">Получить предложение</p>
+            <p class="modal__text">
+                Пожалуйста, укажите свои данные. Наш менеджер свяжется с вами в течение 15 минут.
+            </p>
+        </div>
+        <div class="modal__body">
+            <form action="#" class="modal-form" id="modal">
+                <fieldset class="modal-form__fieldset">
+                    <div class="modal__select-wrapper">
+                        <label for="modal-form" class="modal-form__label">
+                            <div class="label-row">
+                                <span>Модель</span>
+                                <span class="modal-form__error-text-model"></span>
+                            </div>
+                            <select
+                                name="car-model"
+                                id="model-select"
+                                class="modal-form__input modal-form__select"
+                                form="modal"
+                            >
+                                <option class="modal-form__select-option" value="">
+                                    Выберите модель
+                                </option>
+                            </select>
+                        </label>
+                        <ul class="select-list"></ul>
+                    </div>
+                    <label for="modal-tel" class="modal-form__label">
+                        <div class="label-row">
+                            <span>Телефон</span>
+                            <span class="modal-form__error-text-phone"></span>
+                        </div>
+                        <input
+                            type="tel"
+                            class="modal-form__inpu modal-form__phone"
+                            id="modal-tel"
+                            name="phone"
+                            required
+                        />
+                    </label>
+                </fieldset>
+                <button
+                    class="btn action-elem action-elem_fill modal-form__btn"
+                    type="submit"
+                    form="modal"
+                >
+                    Получить предложение
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#chevron-down-icon"></use>
+                    </svg>
+                </button>
+                <label
+                    class="modal-form__label modal-form__label_agreement"
+                    for="modal-form_agreement"
+                >
+                    <input
+                        type="checkbox"
+                        class="modal-form__checkbox"
+                        required
+                        id="modal-form_agreement"
+                    />
+                    <span> Согласен на обработку персональных данных. </span>
+                </label>
+            </form>
+        </div>
+    </div>
+</div>

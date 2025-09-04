@@ -1,0 +1,47 @@
+@use '../vars' as *;
+
+.traid-in {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    .container {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: normal;
+        }
+    }
+    &__image {
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+            height: 350px;
+            object-fit: cover;
+            @include mobile {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    &__text {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        text-wrap: balance;
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+    &__action-elem {
+        max-width: max-content;
+    }
+}

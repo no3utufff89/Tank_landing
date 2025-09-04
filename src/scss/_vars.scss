@@ -1,0 +1,58 @@
+//default colours
+$black: #181818;
+$blackHover: #383838;
+$black-70: #1c2121;
+$black-50: #252c2c;
+$gray: #939697;
+$white: #fff;
+$orange: #ff9549;
+$orangeHover: #fe8630;
+$greenSignal: #00d154;
+
+//layout colours
+//transitions
+$transition: 0.3s ease-in-out;
+//rounds
+$round-s: 8px;
+$round-m: 20px;
+$round-l: 32px;
+$round-full: 50%;
+//Media queriess
+$xs-mobile: 500px;
+$mobile: 768px;
+$xl-tablet: 990px;
+$custom: 1000px;
+$tablet: 1260px;
+$laptop: 1520px;
+$transition: 0.3s ease-in-out;
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+@mixin xl-tablet {
+    @media (max-width: #{$xl-tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin custom {
+    @media (max-width: #{$custom}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+@mixin xs-mobile {
+    @media (max-width: #{$xs-mobile}) {
+        @content;
+    }
+}

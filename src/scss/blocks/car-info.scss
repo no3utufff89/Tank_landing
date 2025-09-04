@@ -1,0 +1,194 @@
+@use '../vars' as *;
+
+.car-info {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: $black-70;
+    @include tablet {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+    }
+    &__sticker {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        transform: rotate(15deg);
+        @include mobile {
+            right: 20px;
+        }
+    }
+    &__body {
+    }
+    &__footer {
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        max-width: 35%;
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &__car-preview {
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+        @include tablet {
+            flex-direction: column;
+            order: -1;
+        }
+    }
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    &__warning {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        color: $orange;
+        margin-bottom: 6px;
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+    &__car-title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        @include tablet {
+            font-size: 28px;
+        }
+    }
+    &__text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 24px;
+        }
+    }
+    &__attention {
+        background-color: #ff2b00;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        padding: 6px 10px;
+        max-width: max-content;
+        border-radius: 10px;
+        svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            color: $white;
+        }
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 110%;
+            color: $white;
+        }
+    }
+}
+.preview {
+    &__image {
+        position: relative;
+        @include mobile {
+            padding-top: 40px;
+        }
+        img {
+            max-width: 800px;
+            max-height: 378px;
+            object-fit: cover;
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+}
+.sticker {
+    background-color: $orange;
+    border-radius: 8px;
+    padding: 6px 14px;
+    width: 140px;
+    @include tablet {
+        padding: 4px 8px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        color: $black;
+        text-align: center;
+        text-wrap: balance;
+        @include tablet {
+            font-size: 12px;
+        }
+    }
+}
+.car-advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+    @include custom {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        max-width: max-content;
+        justify-self: center;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        justify-content: center;
+        @include custom {
+            justify-content: flex-start;
+        }
+    }
+}
+.car-advantage {
+    padding: 11px 14px;
+    border-radius: 8px;
+    background-color: $black;
+
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        color: $white;
+        text-wrap: balance;
+    }
+    &__icon {
+        color: $orange;
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+}

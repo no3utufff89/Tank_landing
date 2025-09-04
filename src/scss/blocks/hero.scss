@@ -1,0 +1,64 @@
+@use '../vars' as *;
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .container {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 100%;
+        align-content: center;
+        @include mobile {
+            grid-row: 2/3;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+    }
+    &__bg {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            @include mobile {
+                max-height: 500px;
+            }
+            @include xs-mobile {
+                height: 300px;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 11px;
+        margin-bottom: 40px;
+        @include custom {
+            row-gap: 6px;
+        }
+    }
+    &__text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 110%;
+        @include custom {
+            font-size: 18px;
+        }
+    }
+    &__title {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        @include custom {
+            font-size: 48px;
+        }
+    }
+    .btn {
+        svg {
+            transform: rotate(-90deg);
+        }
+    }
+}

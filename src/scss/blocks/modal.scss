@@ -1,0 +1,147 @@
+@use '../vars' as *;
+
+.modal {
+    padding: 40px 80px;
+    border-radius: 8px;
+    background-color: $black-70;
+    max-width: 395px;
+    box-sizing: content-box;
+    position: relative;
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 290px;
+        box-sizing: border-box;
+    }
+    &__close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        color: $white;
+        &:hover {
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            transition: $transition;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 150%;
+        text-align: center;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+    &__select-wrapper {
+        position: relative;
+    }
+}
+.modal-form {
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        span:not(.modal-form__error-text-model),
+        span:not(.modal-form__error-text-phone) {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 110%;
+            color: $gray;
+        }
+        input,
+        select {
+            background-color: transparent;
+            border-radius: 8px;
+            padding: 14px 20px;
+            border: 1px solid $gray;
+            color: $gray;
+        }
+        select {
+            appearance: none;
+            position: relative;
+            background-image: url('@img/icons-colored/chevron-down-icon.svg');
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: center right 20px;
+        }
+        option {
+            display: none;
+        }
+        &_agreement {
+            flex-direction: row;
+            column-gap: 10px;
+        }
+    }
+    &__error-text-model,
+    &__error-text-phone {
+        color: $orange !important;
+        font-size: 14px !important;
+    }
+    &__btn {
+        margin-bottom: 30px;
+        max-width: none;
+        width: 100%;
+        justify-content: center;
+    }
+}
+.select-list {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: $black-70;
+    display: flex;
+    height: 0;
+    flex-direction: column;
+    row-gap: 16px;
+    border: 1px solid $gray;
+    overflow: hidden;
+    position: absolute;
+    top: 76px;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    transition: $transition;
+    &.active {
+        display: flex;
+    }
+    &__item {
+        transition: $transition;
+        padding: 16px;
+        cursor: pointer;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        &:hover {
+            background-color: $blackHover;
+        }
+    }
+}
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

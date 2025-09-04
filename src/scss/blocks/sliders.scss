@@ -1,0 +1,30 @@
+@use '../vars' as *;
+
+.car-slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    column-gap: 24px;
+    @include mobile {
+        column-gap: 10px;
+    }
+
+    &__item {
+        border-radius: 10px;
+
+        width: 100%;
+        max-width: 240px;
+        flex: 1 0 auto;
+        height: 200px;
+        overflow: hidden;
+        @include mobile {
+            height: 100px;
+            max-width: 120px;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
